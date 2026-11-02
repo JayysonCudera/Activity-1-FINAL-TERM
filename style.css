@@ -1,0 +1,159 @@
+:root {
+  --espresso: #2b1810;
+  --roast: #4a2c1a;
+  --caramel: #c98f4a;
+  --cream: #f7efe3;
+  --foam: #fffaf2;
+  --gold: #f3d9a4;
+  --error: #b3261e;
+  --success: #2e6b3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: var(--espresso);
+  background:
+    linear-gradient(rgba(43, 24, 16, 0.78), rgba(43, 24, 16, 0.78)),
+    radial-gradient(circle at 20% 20%, #6b4226 0, transparent 45%),
+    radial-gradient(circle at 80% 80%, #8a5a30 0, transparent 40%),
+    var(--espresso);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--foam);
+  border-radius: 18px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  border-top: 6px solid var(--caramel);
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.brand img {
+  width: 120px;
+  height: 120px;
+}
+.brand h1 {
+  margin: 8px 0 2px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--roast);
+}
+.brand p {
+  margin: 0;
+  font-style: italic;
+  color: #7a5a44;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 18px 0 16px;
+  color: var(--roast);
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #d9c6ad;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--espresso);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--caramel);
+  box-shadow: 0 0 0 3px rgba(201, 143, 74, 0.3);
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--foam);
+  background: var(--roast);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+input[type="submit"]:hover {
+  background: var(--caramel);
+  color: var(--espresso);
+}
+input[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+.msg {
+  margin: 0 0 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+.msg.error {
+  background: #fdeceb;
+  color: var(--error);
+  border-left: 4px solid var(--error);
+}
+.msg.success {
+  background: #e9f5ec;
+  color: var(--success);
+  border-left: 4px solid var(--success);
+}
+
+.switch {
+  text-align: center;
+  margin: 22px 0 0;
+  font-size: 0.92rem;
+}
+.switch a {
+  color: var(--roast);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--caramel);
+}
+.switch a:hover {
+  color: var(--caramel);
+}
